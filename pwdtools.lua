@@ -1,6 +1,7 @@
 -- 游戏内小功能
 -- 2016.6.3  主要测试SlashCmdList
 -- reloadui
+-- 2016.7.21 加入github 
 
 -- 配置开关
 local cfgBool			= true   -- true 显示runeframe，false则否

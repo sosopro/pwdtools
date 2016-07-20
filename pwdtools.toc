@@ -1,0 +1,6 @@
+## Interface: 60200
+## Title: pwdtools
+## Notes: 小功能
+## Author: sosopro
+## Version: 0.11  配置开关在开头了
+pwdtools.lua

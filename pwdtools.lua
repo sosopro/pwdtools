@@ -7,7 +7,7 @@
 local cfgBool			= true   -- true 显示runeframe，false则否
 local cfgPriest	 	 	= true	 -- true 移动暗影宝珠,false则否
 local cfgEclipse	 	= true	 -- true 移动鸟条,fals则否
-local cfgAction 		= true   -- true技能太变红，false则否
+local cfgAction 		= true   -- true 技能条变红，false则否，bt4无用
 
 -- 配置开关 
 

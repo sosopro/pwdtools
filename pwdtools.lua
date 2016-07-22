@@ -4,10 +4,9 @@
 -- 2016.7.21 加入github 
 
 -- 配置开关
-local cfgBool			= true   -- true 显示runeframe，false则否
-local cfgPriest	 	 	= true	 -- true 移动暗影宝珠,false则否
-local cfgEclipse	 	= true	 -- true 移动鸟条,fals则否
-local cfgAction 		= true   -- true 技能条变红，false则否，bt4无用
+local cfgBool			= true		-- true 显示runeframe，false则否
+local DkRuneFrameHide	= true		-- false隐藏dk符文条，true显示	 
+local cfgAction 		= false		-- true 技能条变红，false则否，bt4无用
 
 -- 配置开关 
 
@@ -37,23 +36,8 @@ function frame:OnUpdate()
 			RuneFrame:SetPoint("center",WORLDFRAME,"center",0,-160)
 			RuneFrame:SetScale(1.3)
 		 end
-		 if (RuneFrame and cfgBool == false) then
+		 if (RuneFrame and DkRuneFrameHide == false) then
 			RuneFrame:Hide()
-		 end
-		 
-		 -- priest
-		 if (cfgPriest == true and PriestBarFrame) then
-			parent = PriestBarFrame:GetParent()
-			PriestBarFrame:ClearAllPoints()
-			PriestBarFrame:SetPoint("TOP", parent, "center", 30, 60)
-			PriestBarFrame:SetScale(1.2)
-		 end
-		 
-		 -- EclipseBarFrame
-		 if (cfgEclipse == true and EclipseBarFrame) then
-			EclipseBarFrame:ClearAllPoints()
-			EclipseBarFrame:SetPoint("center",WORLDFRAME,"center",0,-160)
-			EclipseBarFrame:SetScale(1.2)
 		 end
 		 
 end

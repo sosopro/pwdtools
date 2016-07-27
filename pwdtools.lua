@@ -81,6 +81,8 @@ function frame:OnUpdate()
 		SetCVar("floatingCombatTextHonorGains", 1) 
 			--*光環 
 		SetCVar("floatingCombatTextAuras", 1)
+			-- 战斗文字放大 默认为0
+		SetCVar("floatingCombatTextCombatDamageDirectionalScale",1)
 
 
 		 

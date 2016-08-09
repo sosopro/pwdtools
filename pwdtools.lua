@@ -4,9 +4,9 @@
 -- 2016.7.21 加入github 
 
 -- 配置开关
-local cfgBool				= true		-- true 显示runeframe，false则否
-local DkRuneFrameHide		= true		-- false隐藏dk符文条，true显示	 
-local cfgAction 			= false		-- true 技能条变红，false则否，bt4无用
+local cfgBool               = true-- true 显示runeframe，false则否
+local DkRuneFrameHide       = true-- false隐藏dk符文条，true显示
+local cfgAction             = false-- true 技能条变红，false则否，bt4无用
 
 -- 配置开关 
 
@@ -104,6 +104,13 @@ function frame:OnUpdate()
 			if (RuneFrame and DkRuneFrameHide == false) then
 				RuneFrame:Hide()
 			end
+            
+            -- monk
+            if (MonkHarmonyBarFrame and cfgBool == true) then
+                MonkHarmonyBarFrame:ClearAllPoints()
+                MonkHarmonyBarFrame:SetPoint("center",WORLDFRAME,"center",0,-160)
+                MonkHarmonyBarFrame:SetScale(1.2)
+            end
 
 end
 frame:SetScript("OnEvent",frame.OnUpdate)
